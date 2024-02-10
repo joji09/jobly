@@ -17,6 +17,11 @@ function CompanyList() {
         setCompanies(companies);
     }
 
+    if (!companies) return (
+        // TODO: ADD LOADING COMPONENT
+        <p>Results not found</p>
+    );
+
     return(
         <div>
             <SearchForm search={search} />

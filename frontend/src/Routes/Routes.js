@@ -9,28 +9,6 @@ function RoutesNav({ login, singup }){
 
     return(
         <div>
-            {/* <Routes>
-            <Route exact path="/">
-                    <Homepage />
-                </Route>
-
-                <Route path="/companies">
-                    <CompanyList />
-                </Route>
-
-                <Route path="/companies/:handle">
-                    <CompanyDetails />
-                </Route>
-
-                <Route path="/jobs">
-                    <JobList />
-                </Route>
-
-                <Route path="/profile">
-                    <JobList />
-                </Route>
-            </Routes> */}
-
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/companies" element={<CompanyList />} />

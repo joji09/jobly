@@ -15,6 +15,10 @@ function CompanyDetails(){
         getCompany();
     }, [handle]);
 
+    if(!company) return (
+        // TODO: ADD LOADING COMPONENT
+        <p>Results not found</p>
+    )
     return (
         <div>
             <h4>{company.name}</h4>
