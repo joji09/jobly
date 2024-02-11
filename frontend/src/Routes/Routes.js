@@ -13,11 +13,13 @@ function RoutesNav({ login, singup }){
         <div>
             <Routes>
                 <Route path="/" element={<Homepage />} />
-                <Route path="/companies" element={<CompanyList />} />
-                <Route path="/companies/:handle" element={<CompanyDetails />} />
-                <Route path="/jobs" element={<JobList />} />
+                <PrivateRoute path="/companies" element={<CompanyList />} />
+                <PrivateRoute path="/companies/:handle" element={<CompanyDetails />} />
+                <PrivateRoute path="/jobs" element={<JobList />} />
                 <Route path="/login" element={<LoginForm />} />
-                <Route path="/singup" element={<Singup />} />
+                <Route path="/singup" element={<SingupForm />} />
+
+                <Redirect path="/" />
             </Routes>
         </div>
     )
