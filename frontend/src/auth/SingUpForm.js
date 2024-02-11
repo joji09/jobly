@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function SingupForm({ singup }){
-    const history = useHistory();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: "",
         password: "",
@@ -17,7 +17,7 @@ function SingupForm({ singup }){
         evt.preventDefault();
         let result = await singup(formData);
         if(result.success){
-            history.push("/companies");
+            navigate.push("/companies");
         } else {
             setFormError(result.errors);
         }

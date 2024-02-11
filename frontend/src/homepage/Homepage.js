@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../auth/UserContext";
 
 function Homepage(){
-    const currUser = React.createContext();
-    const { currentUser } = useContext(currUser);
+    const { currentUser } = useContext(UserContext);
+    console.log(currentUser);
 
     return (
         <div>

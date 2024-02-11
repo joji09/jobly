@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm({ login }){
-    const history = useHistory();
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username: "",
         password: "",
@@ -14,7 +14,7 @@ function LoginForm({ login }){
         evt.preventDefault();
         let result = await login(formData);
         if(result.success){
-            history.push("/companies");
+            navigate.push("/companies");
         } else {
             setFormError(result.errors);
         }

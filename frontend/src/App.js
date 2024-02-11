@@ -10,7 +10,7 @@ export const TOKEN_STORAGE_ID = "jobly-token";
 
 function App() {
 
-
+  const [currentUser, setCurrentUser] = useState(null);
   return (
     <BrowserRouter>
     <div>

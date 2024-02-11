@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import UserContext from "../auth/UserContext";
 
 function Navigation( {logout }){
-    const currUser = React.createContext();
-    const { currentUser } = useContext(currUser);
-
+    const { currentUser } = useContext(UserContext);
     function loggedInNav(){
         return (
             <ul className="navbar-nav ml-auto">
@@ -18,7 +17,7 @@ function Navigation( {logout }){
                     <NavLink to="/profile">Profile</NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link to="/" onClick={logout}>Logout {currentUser.username}</Link>
+                    <Link to="/" onClick={logout}>Logout {currentUser.username || currentUser.first_name}</Link>
                 </li>
             </ul>
         );
