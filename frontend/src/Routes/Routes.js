@@ -4,6 +4,8 @@ import Homepage from "../homepage/Homepage";
 import CompanyList from "../companies/CompanyList";
 import JobList from "../jobs/JobList";
 import CompanyDetails from "../companies/CompanyDetails";
+import LoginForm from "../auth/LoginForm";
+import SingupForm from "../auth/SingUpForm";
 
 function RoutesNav({ login, singup }){
 
@@ -14,7 +16,8 @@ function RoutesNav({ login, singup }){
                 <Route path="/companies" element={<CompanyList />} />
                 <Route path="/companies/:handle" element={<CompanyDetails />} />
                 <Route path="/jobs" element={<JobList />} />
-                <Route path="/profile" element={<JobList />} />
+                <Route path="/login" element={<LoginForm />} />
+                <Route path="/singup" element={<Singup />} />
             </Routes>
         </div>
     )
