@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
 import Navigation from "./Routes/Navigation.js"
-import RoutesNav from "./Routes/Routes";
 import JoblyApi from "./api.js"
 import RoutesNav from "./Routes/Routes";
 import UserContext from "./auth/UserContext.js";
 import useLocalStorage from "./localstorage/useLocalStorage.js";
-import jwt from "jsonwebtoken";
+// import jwt from "jsonwebtoken";
 import './App.css';
 import SingupForm from "./auth/SingUpForm.js";
 
@@ -77,7 +76,7 @@ function App() {
     <UserContext.Provider value={{ currentUser, setCurrentUser }}>
       <div className="app">
         <Navigation logout={logout} />
-        <Routes login={login} singup={singup} />
+        <RoutesNav login={login} singup={singup} />
       </div>
     </UserContext.Provider>
     </BrowserRouter>
